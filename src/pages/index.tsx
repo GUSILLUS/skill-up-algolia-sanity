@@ -1,3 +1,5 @@
 import { AlgoliaSanityPage } from '../features/algolia-sanity-page';
 
-export const Home = () => <AlgoliaSanityPage />;
+const Page = () => <AlgoliaSanityPage />;
+
+export default Page;
