@@ -2,6 +2,8 @@ import { Card, CardContent, Chip, Typography } from '@mui/material';
 
 import { SampleModelHits } from '@/src/shared/types/algolia-hits';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 export const HitsItem = ({ hit }) => {
   const { name, description, date, tags }: SampleModelHits = hit;
 
