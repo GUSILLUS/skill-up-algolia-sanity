@@ -8,13 +8,14 @@ import {deskTool} from 'sanity/desk'
 import {crossDatasetDuplicator} from '@sanity/cross-dataset-duplicator'
 
 // Go to https://www.sanity.io/docs/api-versioning to learn how API versioning works
-import {apiVersion, dataset, projectId} from './sanity/env'
-import {schema} from './sanity/schema'
+import {apiVersion, projectId } from './src/shared/sanity/env'
+import { schema } from './src/shared/sanity/schema';
+
 
 export default defineConfig(
   [
     {
-      projectId: 'lmg5ihsi',
+      projectId: projectId,
       dataset: 'production',
       name: 'production-workspace',
       basePath: '/production',
@@ -36,7 +37,7 @@ export default defineConfig(
       schema,
     },
     {
-      projectId: 'lmg5ihsi',
+      projectId: projectId,
       dataset: 'staging',
       name: 'staging-workspace',
       basePath: '/staging',
@@ -48,7 +49,7 @@ export default defineConfig(
         visionTool({defaultApiVersion: apiVersion}),
         crossDatasetDuplicator({
           // Required settings to show document action
-          types: ['article', 'page', 'pet'],
+          types: [ 'document'],
           // Optional settings
           tool: true,
           filter: '_type != "product"',
