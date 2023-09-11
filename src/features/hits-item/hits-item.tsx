@@ -37,7 +37,7 @@ export const HitsItem = ({ hit }) => {
                 key={tag}
                 label={tag}
                 color="primary"
-                sx={{ fontSize: '18px', fontWeight: '500', padding: '5px' }}
+                sx={{ fontSize: '18px', fontWeight: '500', padding: '6px' }}
               />
             ))}
         </div>
